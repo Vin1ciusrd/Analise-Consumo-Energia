@@ -1,0 +1,507 @@
+---
+title: "Relatório de Consumo de Energia"
+subtitle: "Análise Estatística Descritiva em R"
+author:
+  - name: Vinícius Rodrigues dos Santos
+    email: 05rodriguesvinicius@gmail.com
+    affiliation: 
+      - id: Faculdade SENAC DF
+        name: Faculdade SENAC DF, Professor Ken, Estatística
+date: last-modified
+date-format: "DD/MM/YYYY"
+format:
+  html:
+    code-fold: show
+    code-summary: "Ocultar/Mostrar Código"
+    code-copy: true
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-title: "Sumário"
+    title-block-banner: "#004080"
+    title-block-background-color: "#e6f2ff"
+    embed-resources: true
+    include-after-body:
+      text: |
+        </div>
+        <div style="text-align:center; margin-top:20px;">
+          </button>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            Voltar ao topo
+                  style="background-color:#003366; color:white; padding:10px; 
+                         border:none; cursor:pointer; font-size:16px;">
+  pdf:
+    documentclass: article
+    number-sections: true
+    include-in-header: 
+      text: |
+execute:
+  warning: false
+  echo: true
+  eval: true
+  message: false
+editor: visual
+editor_options: 
+  chunk_output_type: console
+reference-location: margin
+---
+
+## Introdução
+
+Este relatório tem como objetivo analisar o consumo de energia da residência do **Vinícius Rodrigues dos Santos**. Para isso, identificaremos os moradores da casa e avaliaremos o consumo individual de cada um.
+
+Além disso, faremos uma análise dos principais aparelhos que contribuem para o custo de energia, utilizando **estatística descritiva** para extrair informações relevantes. Para melhorar a interpretação dos dados, apresentaremos tabelas e gráficos que facilitarão a visualização dos padrões de consumo.
+
+Ao final, desenvolveremos um **plano de ação** com estratégias para reduzir o consumo de energia e otimizar os gastos da residência.
+
+Como forma de demonstrar **criatividade** este relatório será gerado utilizando o formato `.qmd` no **RStudio**, permitindo a criação de uma página **HTML** interativa e dinâmica. Dessa forma, buscamos facilitar a leitura e interpretação das informações, além de compartilhar conhecimento sobre a linguagem **R** e suas aplicações em análise de dados.
+
+## Moradores da casa
+
+A casa analisada possui **4 moradores e 1 cachorro**. As pessoas que moram na casa são:
+
+1.  **Vinícius**
+2.  **Gustavo**
+3.  **Rosângela**
+4.  **Emerson**
+
+## Hábito de consumo de energia dos moradores
+
+De uma forma geral, os hábitos de consumo de energia concentram-se no uso de aparelhos eletrônicos. Abaixo está o consumo conforme cada morador:
+
+### 🔹 **Vinícius**
+
+-   Deixa o celular carregando durante toda a noite e, ao longo do dia, recarrega o fone sem fio por aproximadamente **2 horas**.\
+-   Carrega o notebook ao menos uma vez por **1 hora**.\
+-   Toma entre **2 e 3 banhos diários**, com duração média de **10 minutos**, gerando consumo no chuveiro e nas lâmpadas de LED à noite.\
+-   Enquanto usa o notebook, mantém a **televisão ligada**.\
+-   Em períodos de calor, utiliza um **ar-condicionado portátil** durante a noite.
+
+### 🔹 **Gustavo**
+
+-   Carrega o celular **1 vez ao dia**.\
+-   Toma **3 banhos diários**, com cerca de **10 minutos** de duração cada.\
+-   Uma vez ao dia, recarrega o **fone sem fio por 1 hora**.\
+-   Assiste cerca de **2 horas de televisão por dia**.\
+-   Em dias quentes, utiliza um **ventilador** durante a noite.
+
+### 🔹 **Rosângela**
+
+-   Carrega o celular durante a noite e mais **2 vezes ao longo do dia**.\
+-   Recarrega um **fone sem fio por 2 horas diárias**.\
+-   Assiste aproximadamente **3 horas de televisão por dia**.\
+-   Toma **4 banhos diários**, cada um com cerca de **10 minutos**.\
+-   Utiliza um **ar-condicionado** durante a noite em períodos de calor.\
+-   Faz uso da **máquina de lavar roupas de segunda a sexta-feira**.
+
+### 🔹 **Emerson**
+
+-   Carrega o celular **2 vezes ao dia**.\
+-   Toma em média **2 banhos diários**, com duração de **5 minutos** cada.\
+-   Assiste cerca de **1 hora de televisão por dia**.\
+-   Utiliza uma **chaleira elétrica 3 vezes ao dia** para aquecer água.\
+-   Usa uma **panela de pressão elétrica uma vez ao dia**.\
+-   Em períodos de calor, recorre ao **ar-condicionado durante a noite**.
+
+### 🔹 **Visitas**
+
+-   Além dos gastos de cada morador citado acima. Em média de 2 vezes por mês a casa recebe visita de avós e primos durante mais ou menos 3 dias (sexta-domingo). Fato esse que faz com que nesses períodos de visita o nível de consumo acaba aumentando.
+
+## Aparelhos que mais consomem energia
+
+### 🔹 Os aparelhos da casa que mais consomem energia (não estão ordenados):
+
+-   **Ar-condicionado**\
+-   **Ar-condicionado portátil**\
+-   **Ventilador**\
+-   **Geladeira**\
+-   **Aparelho de internet**\
+-   **Aparelho da televisão**\
+-   **Televisão**\
+-   **Máquina de lavar roupa**\
+-   **Carregador de celular**\
+-   **Lâmpadas**
+
+## Tabelas e Estatísticas
+
+### Análise da **tabela** de Consumo de Energia Elétrica (Abril 2024 - Abril 2025)
+
+### 🔹 **Mês/Ano**
+
+A coluna mês/ano apresenta o mês em que os dados analisados se referem.
+
+### 🔹 **Variação do Consumo (KWH)**
+
+O menor consumo foi registrado em **maio de 2024** (244 KWH), enquanto o maior ocorreu em **setembro de 2024** (352 KWH). Essas oscilações podem estar ligadas a fatores sazonais, como temperatura e hábitos de uso.
+
+### 🔹 **Gastos com Energia**
+
+O valor pago geralmente acompanha o consumo de energia, mas algumas discrepâncias foram observadas. Em **outubro de 2024**, o consumo foi de 262 KWH, mas o valor pago foi relativamente alto (**R\$ 292,53**), sugerindo possíveis variações na tarifa ou cobranças adicionais.
+
+![Tabela excel informações iniciais](tabela-01.png)
+
+```{r}
+#CRIAÇÂO DA TABELA NO R
+mes_ano <- c("abr/24", "mai/24", "jun/24", "jul/24", "ago/24", "set/24", "out/24", "nov/24", 
+             "dez/24", "jan/25", "fev/25", "mar/25", "abr/25")
+
+kwh_utilizado <- c(268, 244, 319, 246, 306, 352, 262, 263, 247, 271, 291, 251, 316)
+
+valor_conta <- c(262.71, 246.28, 317.63, 247.35, 300.38, 365.18, 292.53, 265.74, 
+                 236.48, 257.21, 304.47, 265.08, 322.27)
+
+df_dados_energia <- data.frame(
+  mes_ano = factor(mes_ano, levels = mes_ano, ordered = TRUE),
+  kwh_utilizado,
+  valor_conta
+)
+```
+
+### Análise da **tabela** de média, mediana e moda
+
+-   **Média**: O consumo médio de energia é de **280 KWH**, correspondendo a um custo médio de **R\$ 283,33**.
+
+-   **Mediana**: O valor mediano de consumo é **268 KWH**, o que significa que metade dos registros estão abaixo desse valor e metade acima. O custo mediano é **R\$ 265,74**.
+
+-   **Moda**: Não há uma moda, indicando que nenhum valor de consumo ou custo se repete com maior frequência no conjunto de dados.
+
+-   Esses dados são fundamentais para entender padrões de consumo e auxiliar na gestão financeira do uso de energia elétrica.
+
+![Tabela excel dados estatísticos](tabela-02.png)
+
+### Média calculada no R
+
+```{r}
+#MEDIA CALCULADA NO R
+media_kwh <- mean(kwh_utilizado)
+media_valor <- mean(valor_conta)
+cat("Média kwh:", media_kwh, "\n")
+cat("Média valor:", media_valor, "\n")
+```
+
+### Mediana calculada no R
+
+```{r}
+#MEDIANA CALCULADA NO R
+mediana_kwh <- median(kwh_utilizado)
+mediana_valor <- median(valor_conta)
+cat("Mediana kwh:", mediana_kwh, "\n")
+cat("Mediana valor:", mediana_valor, "\n")
+```
+
+### Moda calculada no R
+
+```{r}
+#MODA CALCULADA NO R
+calcular_moda <- function(x) {
+  uniqx <- unique(x)
+  freq <- tabulate(match(x, uniqx))
+  max_freq <- max(freq)
+  
+  if (max_freq == 1) {
+    return("Não há moda")
+  } else {
+    return(uniqx[which(freq == max_freq)])
+  }
+}
+
+
+moda_kwh <- calcular_moda(kwh_utilizado)
+moda_valor <- calcular_moda(valor_conta)
+cat("Moda kwh:", moda_kwh, "\n")
+cat("Moda valor:", moda_valor, "\n")
+```
+
+### Análise da **tabela** de desvio padrão, maior, menor e amplitude
+
+-   **Desvio Padrão**: A variação média dos valores de consumo é de **32,84 KWH**, enquanto a dos custos é de **R\$ 37,45**, indicando uma dispersão moderada dos dados.
+-   **Maior Consumo**: O maior consumo registrado é **352 KWH**, correspondendo a um custo de **R\$ 365,18**.
+-   **Menor Consumo**: O menor consumo registrado é **244 KWH**, com um custo de **R\$ 236,48**.
+-   Essa diferença pode ser utilizada para prever gastos em diferentes períodos e ajustar estratégias de economia.
+-   **Amplitude**: A diferença entre o menor e o maior consumo registrado é **108 KWH**, enquanto a diferença entre os menores e maiores custos é **R\$ 128,70**. Essa medida mostra a variabilidade total dos dados.
+-   Essas métricas são essenciais para entender a distribuição dos valores e podem ajudar na previsão de consumo e custos futuros.
+
+![Tabela excel desvio padrão e amplitude](tabela-03.png) ![Tabela excel maior e menor(kwh e valor)](tabela-04.png)
+
+### Desvio Padrão calculada no R
+
+```{r}
+#CALCULO DO DESVIO PADRÂO NO R
+desvio_padrao_kwh <- sd(kwh_utilizado)
+desvio_padrao_valor <- sd(valor_conta)
+cat("Desvio padrão kwh:", desvio_padrao_kwh, "\n")
+cat("Desvio padrão valor:", desvio_padrao_valor, "\n")
+```
+
+### Máximo, Mínimo, Amplitude calculada no R
+
+```{r}
+#CALCULO DO MÁXIMO, MÍNIMO< AMPLITUDE
+max_kwh <- max(kwh_utilizado)
+min_kwh <- min(kwh_utilizado)
+
+max_valor <- max(valor_conta) 
+min_valor <- min(valor_conta)
+
+amplitude_kwh <- max_kwh - min_kwh
+amplitude_valor <- max_valor - min_valor
+
+cat("Max kwh:", max_kwh, "\n")
+cat("Min kwh:", min_kwh, "\n")
+cat("Max valor:", max_valor, "\n")
+cat("Min valor:", min_valor, "\n")
+cat("Amplitude kwh:", amplitude_kwh, "\n")
+cat("Amplitude valor:", amplitude_valor, "\n")
+```
+
+### Variância calculada no R
+
+```{r}
+variancia_kwh <- var(kwh_utilizado) 
+variancia_valor <- var(valor_conta)
+
+cat("Variância kwh:", variancia_kwh, "\n")
+cat("Variância valor:", variancia_valor, "\n")
+```
+
+### Covariância calculada no R
+
+```{r}
+covariancia <- cov(kwh_utilizado, valor_conta)
+cat("Covariância:", covariancia, "\n")
+```
+
+### Análise da **tabela** de dados trimestrais
+
+-   **Maior Consumo**: O trimestre de **Jul-Set** apresentou o maior consumo médio, atingindo **301 KWH**, com um custo médio de **R\$ 304,30**.
+-   **Menor Consumo**: O trimestre de **Out-Dez** teve o menor consumo médio, com **257 KWH**, e um custo médio de **R\$ 264,92**.
+-   **Variação dos Custos**: O consumo médio mais alto coincide com o maior custo médio, evidenciando uma relação direta entre o uso de energia e os gastos.
+-   A análise dos dados trimestrais revela padrões de variação no consumo de energia e nos custos associados. Essas informações podem ser utilizadas para planejamento financeiro e para estratégias de economia energética ao longo do ano.
+
+![Tabela excel dados por trimestre](tabela-05.png)
+
+```{r}
+#CRIAÇÂO DA TABELA DOS DADOS TRIMESTRAIS
+trimestre <- c("Abr-Jun", "Jul-Set", "Out-Dez", "Jan-Mar")
+media_kwh <- c(277, 301, 257, 271)
+media_valor <- c(275.54, 304.30, 264.92, 275.59)
+
+df_visao_por_trimestre <- data.frame(Trimestre = trimestre,
+                           Media_KWH = media_kwh,
+                           Media_Valor = media_valor)
+print(df_visao_por_trimestre)
+```
+
+### Análise da **tabela** de variação percentual do consumo de energia
+
+-   **Variação Significativa**: Os meses de **junho de 2024** (+30,74%) e **abril de 2025** (+25,90%) apresentam os maiores aumentos no consumo de energia.
+-   **Queda Mais Expressiva**: O consumo registrou a maior redução em **outubro de 2024** (-25,57%) e **julho de 2024** (-22,88%).
+-   **Flutuação do Consumo**: O padrão de consumo varia significativamente ao longo do ano, sugerindo influências sazonais como clima, hábitos e demandas energéticas.
+-   A variação percentual no consumo de energia elétrica ao longo dos meses evidencia períodos de aumento e redução, o que pode ser útil para prever gastos futuros e implementar medidas de economia. A análise desses dados é essencial para uma gestão eficiente do consumo de energia.
+
+![Tabela excel variação %](tabela-06.png)
+
+```{r}
+#CRIAÇÃO DO DATA FRAME COM VARIAÇÃO PERCENTUAL DO CONSUMO
+mes_ano <- c("abr/24", "mai/24", "jun/24", "jul/24", "ago/24", "set/24", 
+             "out/24", "nov/24", "dez/24", "jan/25", "fev/25", "mar/25", "abr/25")
+
+variacao_percentual <- c(0, -8.96, 30.74, -22.88, 24.39, 15.03, 
+                         -25.57, 0.38, -6.08, 9.72, 7.38, -13.75, 25.90)
+
+df_variacao_percentual <- data.frame(
+  Mes_Ano = factor(mes_ano, levels = mes_ano, ordered = TRUE), 
+  Variacao_Percentual_KWH = variacao_percentual
+)
+
+print(df_variacao_percentual)
+```
+
+### Análise da **tabela** de distribuição da frequência de consumo
+
+-   **Intervalo mais frequente**: O intervalo de **244 a 266 KWH** possui a maior frequência, indicando que a maioria dos registros de consumo estão nessa faixa.
+-   **Distribuição**: Os dados mostram que o consumo de energia está distribuído de forma desigual, com alguns intervalos contendo menos ocorrências.
+-   **Uso Estratégico**: A análise dessa distribuição pode ajudar na previsão de consumo futuro e na implementação de estratégias de economia de energia.
+-   A distribuição de frequência do consumo de energia elétrica revela padrões importantes, permitindo a análise da variabilidade e a identificação de faixas de consumo mais comuns. Essas informações podem ser úteis para otimizar o uso de energia e planejar melhor os gastos ao longo do tempo.
+
+![Tabela excel distribuição de frequência](tabela-07.png)
+
+```{r}
+#CRIAÇÃO DO DATA FRAME COM DISTRIBUIÇÃO DA FREQUÊNCIA DO CONSUMO 
+intervalo <- c("244 - 266", "267 - 289", "290 - 312", "313 - 335", "336 - 358")
+frequencia <- c(6, 2, 2, 2, 1)
+
+df_frequencia <- data.frame(Intervalo = intervalo, Frequencia = frequencia)
+
+print(df_frequencia)
+```
+
+## Gráficos
+
+```{r}
+#CARREGA BIBLIOTECAS PARA CRIAR OS GRÁFICOS
+library(ggplot2)
+library(scales)
+library(tidyr)
+```
+
+### Gráfico consumo mensal
+
+-   **Picos de Consumo**: O maior consumo foi registrado em **agosto de 2024**, sugerindo um período de alta demanda energética.
+-   **Menor Consumo**: O consumo mais baixo ocorreu em **setembro de 2024**, evidenciando uma queda significativa em comparação com o mês anterior.
+-   **Variação ao Longo do Ano**: O consumo apresentou uma queda notável em **outubro de 2024**, seguida por uma estabilização nos meses seguintes.
+-   **Tendência Geral**: A linha vermelha demonstra flutuações sazonais e possíveis padrões recorrentes que podem ajudar a prever o consumo futuro.
+-   O gráfico revela importantes variações no consumo mensal de energia elétrica, indicando períodos de aumento e redução. Essas informações podem ser utilizadas para melhorar o planejamento energético e adotar estratégias de economia para os meses de maior demanda.
+
+```{r}
+ggplot(df_dados_energia, aes(x = mes_ano, y = kwh_utilizado)) +
+  geom_bar(stat = "identity", fill = "blue", alpha = 0.7) + 
+  geom_line(aes(group = 1), color = "red", size = 1.2) +    
+  geom_point(color = "black", size = 3) +                     
+  labs(title = "CONSUMO MENSAL",
+       x = "Mês/Ano",
+       y = "Consumo") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(color = "black", hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.background = element_rect(fill = "lightgray", color = "white"), 
+    plot.background = element_rect(fill = "white")  
+  )
+```
+
+### Gráfico do valor mensal
+
+-   **Mês de Maior Gasto**: Em **setembro de 2024**, o gasto atingiu **R\$ 365,18**, sendo o valor mais alto registrado no período.
+-   **Mês de Menor Gasto**: O menor gasto ocorreu em **dezembro de 2024**, com **R\$ 236,48**, possivelmente refletindo uma redução no consumo energético.
+-   **Variação ao Longo do Ano**: O gasto mensal demonstrou oscilações relevantes, com aumento significativo em **maio de 2024** e abril de 2025, sugerindo padrões sazonais de consumo.
+-   **Tendência Geral**: A linha verde com pontos pretos representa a tendência dos gastos ao longo do tempo, permitindo uma visão da variação e possível previsão de despesas futuras.
+-   O gráfico revela padrões importantes na evolução dos gastos com energia elétrica, permitindo identificar períodos de maior e menor consumo. Essas informações são valiosas para ajustes financeiros e estratégias de economia ao longo do ano.
+
+```{r}
+ggplot(df_dados_energia, aes(x = mes_ano, y = valor_conta)) +
+  geom_bar(stat = "identity", fill = "blue", alpha = 0.7) +  
+  geom_line(aes(group = 1), color = "darkgreen", size = 1.2) +     
+  geom_point(color = "black", size = 3) +                    
+  geom_text(aes(label = round(valor_conta, 2)), vjust = -0.5, color = "black") +
+  labs(title = "VALOR MENSAL DE GASTOS",
+       x = "Mês/Ano",
+       y = "Valor da Conta (R$)") +
+  scale_y_continuous(labels = label_dollar(prefix = "R$ ", big.mark = ".", decimal.mark = ",")) + 
+  theme_minimal() +
+  theme(
+    plot.title = element_text(color = "black", hjust = 0.5, size = 16, face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.title.x = element_text(color = "black", size = 14),  
+    axis.title.y = element_text(color = "black", size = 14),  
+    panel.background = element_rect(fill = "lightgray", color = "white"),  
+    plot.background = element_rect(fill = "white")  
+  )
+```
+
+### Gráfico das variações percentuais
+
+-   **Aumento Mais Significativo**: O maior aumento percentual ocorreu em **junho de 2024** (+30,74%), seguido por **abril de 2025** (+25,90%).
+-   **Maior Redução**: O consumo apresentou a maior queda em **outubro de 2024** (-25,57%), sugerindo um período de menor demanda energética.
+-   **Flutuações**: A análise indica uma variação expressiva ao longo do ano, possivelmente devido a fatores sazonais como clima e hábitos de consumo.
+-   O gráfico revela padrões importantes na variação percentual do consumo de energia elétrica, permitindo prever períodos de maior e menor demanda. Essas informações são essenciais para um planejamento energético eficiente e estratégias de economia.
+
+```{r}
+ggplot(df_variacao_percentual, aes(x = Mes_Ano, y = Variacao_Percentual_KWH, group = 1)) +
+  geom_line(color = "white", size = 1.2) +
+  geom_point(color = "yellow", size = 4) +  
+  geom_text(aes(label = paste0(Variacao_Percentual_KWH, "%")), 
+            vjust = -0.5, size = 4, color = "black") + 
+  labs(title = "VARIAÇÃO PERCENTUAL",
+       x = "Mês/Ano",
+       y = "Variação (%)") +
+  scale_y_continuous(limits = c(min(df_variacao_percentual$Variacao_Percentual_KWH) - 5,
+                                max(df_variacao_percentual$Variacao_Percentual_KWH) + 4)) + 
+  theme_minimal() +
+  theme(
+    panel.background = element_rect(fill = "#D9D9D9", color = "black"),
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+```
+
+### Gráfico consumo e custo por trimestre
+
+-   **Trimestre de Maior Consumo**: **Jul-Set** apresentou o maior consumo médio (**301 KWH**), acompanhado do maior custo médio (**R\$ 304,30**).
+-   **Trimestre de Menor Consumo**: **Out-Dez** teve o menor consumo médio (**257 KWH**), refletindo um custo mais baixo (**R\$ 264,92**).
+-   **Variação de Custos**: A relação entre consumo e custo segue um padrão consistente, indicando que períodos de maior demanda resultam em maior gasto.
+-   **Tendência de Consumo**: O gráfico sugere uma possível influência sazonal, com picos e quedas que podem estar relacionados a fatores externos como temperatura e hábitos de consumo.
+-   A análise do consumo e custo médio de energia por trimestre revela variações importantes ao longo do ano. Essas informações podem ser utilizadas para prever gastos futuros, ajustar estratégias de economia e otimizar o uso de energia elétrica.
+
+```{r}
+
+dados_long <- pivot_longer(df_visao_por_trimestre, cols = c("Media_KWH", "Media_Valor"),
+                           names_to = "Indicador", values_to = "Valor")
+ggplot(dados_long, aes(x = Trimestre, y = Valor, fill = Indicador)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.4), width = 0.4) + 
+  geom_text(aes(label = round(Valor, 2)), position = position_dodge(width = 0.8), vjust = -0.5, size = 5, color = "black") +
+  labs(title = "Média de Consumo e Valor por Trimestre", 
+       x = "Trimestre",
+       y = "Valores") +
+  scale_fill_manual(name = "Indicador", 
+                    labels = c("Média KWH", "Valor (R$)"),
+                    values = c("#0073e6", "#f39c12")) +  
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+        axis.title.x = element_text(size = 14),
+        axis.title.y = element_text(size = 14),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom")  
+```
+
+### Gráfico de frequência de uso por intervalo
+
+-   **Intervalo mais frequente**: A maioria dos registros de consumo está no intervalo **244 - 266 KWH**, representando **46,2%** dos dados.
+-   **Distribuição equilibrada**: Três intervalos possuem a mesma frequência (**15,4%**), indicando uma dispersão uniforme dos dados nesses segmentos.
+-   **Menor ocorrência**: O intervalo **336 - 358 KWH** possui apenas **7,7%**, mostrando que consumos elevados são menos comuns.
+-   **Impacto na gestão energética**: Essa distribuição pode ajudar na previsão de consumo futuro e na definição de estratégias para otimização de energia.
+-   O gráfico de frequência do consumo de energia elétrica permite identificar padrões importantes, destacando faixas onde o consumo é mais concentrado. Esses dados podem ser usados para ajustar políticas de economia e prever tendências ao longo do tempo.
+
+```{r}
+ggplot(df_frequencia, aes(x = "", y = Frequencia, fill = Intervalo)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +  
+  geom_text(aes(label = paste0(round(Frequencia / sum(Frequencia) * 100, 1), "%")), 
+            position = position_stack(vjust = 0.5)) + 
+  scale_fill_manual(values = c("#3498db", "#e67e22", "#f1c40f", "#95a5a6", "#2c3e50")) +
+  labs(title = "FREQUÊNCIA DE CONSUMO") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),  
+    axis.text.x = element_blank(),  
+    axis.text.y = element_blank(),  
+    panel.grid = element_blank()
+    )
+```
+
+## Plano de Ação para Redução do Consumo
+
+### 1. Mudança nos Hábitos de Consumo
+
+-   **Carregamento de dispositivos**: Indicar aos moradores que carreguem os celulares apenas até a carga completa, evitando a conexão desnecessária durante toda a noite.
+-   **Uso da televisão**: Não utilizar a televisão como fundo sonoro, ligar apenas quando for assistir de fato.
+-   **Banhos mais eficientes**: Reduzir o tempo de banho para que as médias fiquem abaixo de 10 minutos e, se possível, utilizar temperaturas mais baixas para diminuir o gasto do chuveiro.
+-   **Uso do notebook**: Ajustar o brilho da tela para que a bateria dure mais tempo e reduzir o tempo de carregamento.
+
+### 2. Otimização de Aparelhos Eletrônicos
+
+-   **Ar-condicionado e ventilação**: Incentivar o uso da ventilação natural e limitar o uso de ar-condicionado e ventiladores a dias de calor extremo.
+-   **Iluminação**: Trocar todas as lâmpadas para LED e lembrar sempre de apagá-las quando o uso não for necessário.
+-   **Eletrodomésticos**: Reduzir a frequência de abertura da geladeira e utilizar a máquina de lavar apenas quando houver uma quantidade maior de roupas para lavar.
+
+### 3. Redução de Consumo em Dias de Visitas
+
+-   **Monitoramento do consumo**: Incentivar as visitas a adotarem práticas sustentáveis, como redução do tempo de banho e utilização moderada de aparelhos eletrônicos.
+-   **Uso compartilhado de eletrônicos**: Evitar o uso simultâneo de televisões e outros dispositivos.
+
+### 4. Conscientização
+
+-   **Reuniões periódicas**: Conversar com os moradores e as visitas sobre a importância e benefícios da economia de energia.
+-   **Monitoramento**: Acompanhar mensalmente ou trimestralmente as médias de consumo para identificar o que precisa ser melhorado.
